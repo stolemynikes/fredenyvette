@@ -6,7 +6,12 @@ import HomePhoto from '../assets/images/homepage/Foto1.jpg'
 
 //styling
 import '../styles/_homepage.scss';
+
+//box components
 import HomeAdemBox from '../components/HomeAdemBox';
+import HomeCoachingBox from '../components/HomeCoachingBox';
+import HomeHondenBox from '../components/HomeHondenBox';
+import HomeKennisBox from '../components/HomeKennisBox';
 
 export default function Home() {
   return (
@@ -50,9 +55,9 @@ export default function Home() {
         <div className="homepage-boxes">
 
             <HomeAdemBox/>
-            <HomeAdemBox/>
-            <HomeAdemBox/>
-            <HomeAdemBox/>
+            <HomeCoachingBox/>
+            <HomeHondenBox/>
+            <HomeKennisBox/>
 
         </div>
 

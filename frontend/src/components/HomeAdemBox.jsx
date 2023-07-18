@@ -1,35 +1,37 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 //pictures
-import BoxPhoto from '../assets/images/Adem/BoxFoto.jpg'
+import BoxPhoto from '../assets/images/adem/BoxFoto.jpg'
 
 //styling
-import '../styles/_adembox.scss'
+import '../styles/_homepagebox.scss'
 
 export default function HomeAdemBox() {
   return (
-    <div className='adembox-container'>
+    <Link to='/ademwerk' className='adembox-container'>
 
         <img src={BoxPhoto} alt="" />
 
         <div>
 
-            <h1>ADEMWERK</h1>
+            <h1>Ademwerk</h1>
 
             <div>
-                <ul>
-                    <li>Stress en spanning verminderen</li>
-                    <li>Vastgezette emoties en blokkades laten verdwijnen</li>
-                    <li>Lichamelijke klachten verzachten of oplossen</li>
-                    <li>Mentaal sterker worden</li>
-                    <li>Fit en energiek zijn</li>
-                </ul>
+                <p>&quot;Ademen, meer dan alleen in- en uit&quot;</p>
             </div>
-
-            <button>Meer over ademwerk</button>
 
         </div>
 
-    </div>
+        <div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+
+        </div>
+
+    </Link>
   )
 }

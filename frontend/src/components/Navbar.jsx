@@ -9,12 +9,24 @@ import '../styles/_navbar.scss'
 
 export default function Navbar() {
     
+    const [color, setColor] = useState(false)
+
+    const changeColor = () => {
+        if(window.scrollY >= 60) {
+            setColor(true)
+        } else {
+            setColor(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeColor)
+
   return (
     <>
 
     <div className="navbar-under"></div>
     
-    <div className="navbar-container">
+    <div className={color ? 'navbar-scroll navbar-container' : 'navbar-container navbar-noscroll'}>
 
         <div>
 
@@ -26,17 +38,19 @@ export default function Navbar() {
 
             <div>
 
-                <Link>Home</Link>
-                <Link>Over ons</Link>
-                <Link>Het team</Link>
+                <Link to='/'>Home</Link>
+                <Link to='/over-ons'>Over ons</Link>
+                <Link to='/tarieven'>Tarieven</Link>
+                <Link to='/contact'>Contact</Link>
 
             </div>
 
-            <div>
+
+            {/* <div>
 
             <Link><button>Contact</button></Link>
 
-            </div>
+            </div> */}
 
 
         </div>
